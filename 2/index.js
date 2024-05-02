@@ -1,11 +1,16 @@
-const input = document.getElementById('input')
+const input = document.getElementById("input")
+
+
+function reverseString(str){
+    return str.split("").reverse().join("")
+}
 
 function Check(){
     const value = input.value
-     
-    const str1 = value.split("").reverse().join("")
 
-    if(str1 === value){
+    const reverse = reverseString(value)
+
+    if(value === reverse  ){
         alert("is a palidrome")
     }else{
         alert("is not a palidrome")
