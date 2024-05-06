@@ -11,6 +11,8 @@ function renderItems(){
         container.style.marginBottom = "10px"
 
         const text = document.createElement("p")
+        text.style.display = "inline"
+        text.style.marginRight = "10px"
         text.textContent = item
 
         const button = document.createElement("button")
@@ -35,4 +37,7 @@ function saveItems(){}
 
 function addItem(){}
 
-function removeItem(idx){}
+function removeItem(idx){
+    items.splice(idx, 1)
+    renderItems()
+}
