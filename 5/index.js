@@ -1,6 +1,5 @@
 let expenses = []
 const input = document.getElementById("expensesInput")
-// const priceInput = documnet.getElementById("price")
 const expensesDiv = document.getElementById("expenses")
 
 
