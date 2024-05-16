@@ -4,7 +4,7 @@ const input = document.getElementById("expensesInput");
 const pricesInput = document.getElementById("priceInput");
 const expensesDiv = document.getElementById("expenses");
 
-// Load data from localStorage when the page loads
+
 window.onload = function() {
     loadExpenses();
 };
@@ -29,6 +29,12 @@ function displayExpenses() {
 
     expenses.forEach((expense, i) => {
         const container = document.createElement('div');
+        container.style.display = 'flex'
+        container.style.alignItems = 'center'
+        container.style.border = '1px solid gray'
+        container.style.margin = '10px'
+        container.style.padding = '10px'
+        container.style.width = '50%'
 
         const text = document.createElement('p');
         text.textContent = `Expense: ${expense}`;
@@ -65,7 +71,7 @@ function addExpenses(event) {
         input.value = "";
         pricesInput.value = "";
 
-        // Save data to localStorage after adding expenses
+        
         saveExpenses();
     }
 }
@@ -75,7 +81,6 @@ function deleteExpense(index) {
     prices.splice(index, 1);
     displayExpenses();
 
-    // Save data to localStorage after deleting expense
     saveExpenses();
 }
 
