@@ -56,8 +56,8 @@ function displayExpenses() {
     });
 }
 
-function addExpenses(event) {
-    event.preventDefault();
+function addExpenses(e) {
+    e.preventDefault();
     const expenseValue = input.value;
     const priceValue = pricesInput.value;
 
